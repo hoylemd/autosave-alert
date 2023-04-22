@@ -1,0 +1,9 @@
+{
+    "name": "autosave-alert",
+    "version": "0.1.0",
+    "title": "Autosave Alert",
+    "author": "hoylemd",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1"],
+    "description": "Provides warnings before autosave so you don't get interrupted as easily."
+}
