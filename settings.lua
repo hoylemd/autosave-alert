@@ -1,0 +1,10 @@
+-- settings:
+-- autosave interval
+-- warnings active:
+--  10s countdown
+--  10s warning
+--  30s warning
+--  1m warning
+--  5m warning
+--  10m warning
+-- play sound? (maybe per warning?)
