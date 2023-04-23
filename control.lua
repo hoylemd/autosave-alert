@@ -76,19 +76,20 @@ local function RegisterWarningHandler()
     script.on_nth_tick(spans.one_minute, on_offset_interval)
 end
 
-local function on_init()
-    -- register handler
-    RegisterWarningHandler()
-    -- get autosave interval
-    -- TODO: put below into 'update settings' function
-    -- TODO: get from settings
-    global.autosave_interval = spans.one_minute * 5
-    -- get warning times
-    -- TODO: get from settings
+local function update_settings()
+    local autosave_minutes = settings.global['autosaveAlert_interval'].value
+    global.autosave_interval = spans.one_minute * autosave_minutes
+
     global.warnings = {}
     global.warnings[1] = spans.one_minute
     global.warnings[2] = spans.one_minute * 2
     global.warnings[3] = spans.one_minute * 5
+end
+
+local function on_init()
+    -- register handler
+    RegisterWarningHandler()
+    update_settings()
 end
 
 local function on_load()
@@ -96,6 +97,13 @@ local function on_load()
     RegisterWarningHandler()
 end
 
+local function on_runtime_mod_setting_changed(args)
+    if args.setting == 'autosaveAlert_interval' and args.setting_type == 'runtime-global' then
+        update_settings()
+    end
+end
+
 script.on_load(on_load)
 script.on_init(on_init)
+script.on_event(defines.events.on_runtime_mod_setting_changed, on_runtime_mod_setting_changed)
 -- TODO: trigger update_settings when settings change or when player joins?
