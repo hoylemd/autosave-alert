@@ -11,10 +11,11 @@ data:extend({
 })
 
 -- warnings active:
---  10s countdown
---  10s warning
---  30s warning
+--  TODO: 10s countdown
+--  TODO: 10s warning
+--  TODO: 30s warning
 --  1m warning
+--  2m warning
 --  5m warning
---  10m warning
--- play sound? (maybe per warning?)
+--  TODO: 10m warning
+-- TODO: play sound? (maybe per warning?)
