@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: 2023-04-24 18:30:00+00:00
+Date: 2023-04-24
   Major Features:
     - Initial release.
     - Print warning messages to the console at 5, 2, and 1 minute before autosave interval
