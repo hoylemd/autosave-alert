@@ -5,5 +5,6 @@
     "author": "hoylemd",
     "factorio_version": "1.1",
     "dependencies": ["base >= 1.1"],
-    "description": "Provides warnings before autosave so you don't get interrupted as easily."
+    "description": "Provides warnings before autosave so you don't get interrupted as easily.",
+    "homepage": "https://github.com/hoylemd/autosave-alert"
 }
